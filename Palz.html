@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Page</title>
+<style>
+/* GLOBAL STYLES */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:content-box;
+  font-family:'Times New Roman', Times, serif;
+}
+
+body{
+  min-height:100vh;
+  color:white;
+  background: linear-gradient(270deg,#083e3e,#12550a,#b4103e);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top:0;
+  z-index: 10;
+}
+
+nav h1{
+  color:#00eaff;
+  font-size:1.8rem;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin-right: 100px;
+  font-size: 1.5em;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+  margin-right: 70px;
+  font-size: 1.5em;
+}
+
+nav ul li a:hover{
+  color:#00ff9d;
+  text-shadow:0 0 10px #00ff9d;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:120px 20px 80px;
+}
+
+.hero h1{
+  font-size:3rem;
+  background: linear-gradient(90deg,#00eaff,#ff55ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation: glow 2s infinite alternate;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:1.2rem;
+  color:#ccc;
+}
+
+.glow-text{
+  display:block;
+  margin-top:20px;
+  font-weight:bold;
+  font-size:1.5rem;
+  background: linear-gradient(45deg,#ff55ff,#00eaff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation: glowText 2s infinite alternate;
+}
+
+/* SCHOOL LOGOS */
+.logos{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-top:40px;
+}
+
+.logos img{
+  width:100px;
+  height:120px;
+  object-fit:cover;
+  border-radius:20px;
+  backdrop-filter: blur(5px);
+  padding:10px;
+  border:2px solid rgba(255,255,255,0.3);
+  transition:.3s;
+  width: 100px;
+}
+
+.logos img:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 15px #00eaff;
+}
+
+
+/* CORE VALUES SECTION */
+.core-values h2{
+  font-size:1.5rem;
+  color:#00ff9d;
+  text-shadow:0 0 12px #00ff9d;
+  margin-bottom:40px;
+}
+
+.values{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* GLASS CARDS */
+.value{
+  background: rgba(255,255,255,0.05);
+  border-radius:15px;
+  padding:25px;
+  width:220px;
+  border:1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  text-align:center;
+  transition: 5s;
+  animation: bounce 1s ease infinite;
+}
+
+.value:hover{
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:0 0 25px #00ff9d, 0 0 10px #ff55ff;
+  border-color:#00ff9d;
+}
+
+.value h1{
+  font-size: 15px;
+    color: #00ff9d;
+     text-align: center;
+    justify-content: center;
+    text-shadow: 0 0 10px #00ff9d;
+    font-style: italic;
+    font-size: 2em;
+ 
+}
+
+.value p{
+  font-size:1rem;
+  color:#ccc;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background: rgba(0,0,0,0.4);
+  color:#aaa;
+  font-size:.9rem;
+  margin-top:50px;
+}
+
+/* ANIMATIONS */
+@keyframes glow{
+  0%{text-shadow:0 0 10px #00eaff;}
+  50%{text-shadow:0 0 25px #ff55ff;}
+  100%{text-shadow:0 0 10px #00eaff;}
+}
+
+@keyframes glowText{
+  0%{text-shadow:0 0 8px #00eaff,0 0 15px #ff55ff;}
+  50%{text-shadow:0 0 20px #ff55ff,0 0 30px #00eaff;}
+  100%{text-shadow:0 0 8px #00eaff,0 0 15px #ff55ff;}
+}
+
+@keyframes bounce{
+  0%, 100%{transform: translateY(0);}
+  50%{transform: translateY(-8px);}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <h1>Lucille's Website</h1>
+  <ul>
+    <li><a href="mission.html">Mission</a></li>
+    <li><a href="vision.html">Vision</a></li>
+    <li><a href="core%20values.html">Core Values</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>Welcome to Our School Website,
+     <br>Explorer</br></h1>
+
+  <p>"Light of the World: Nurturing intellect, inspiring character,
+    <br>and creating leaders who light up the world" </br></p>
+  
+  <span class="glow-text">THE LIGHT OF THE WORLD</span>
+
+  <!-- SCHOOL LOGOS -->
+  <div class="logos">
+    <img src="c:\Users\lucil\Pictures\Screenshots\ics logo.png" alt="School Logo 1">
+    <img src="c:\Users\lucil\Pictures\Screenshots\tcgc logo.png" alt="School Logo 2">
+  </div>
+  
+</section>
+
+<!-- CORE VALUES SECTION -->
+<section class="core-values">
+  <div class="values">
+    <div class="value">
+      <h1> <a href="Reflection.html"> Personal Reflection Page </a> </h1>
+    </div>
+    <div class="value">
+      <h1> <a href="Advocacy.html"> Community Service or Advocacy </a></h1>
+    </div>
+    <div class="value">
+      <h1> <a href="Inspirational.html"> Inspirational Portfolio Page </a></h1>
+    </div>
+    <div class="value">
+      <h1> <a href="Educational.html"> Educational or Information Page </a></h1>
+    </div>
+     <div class="value">
+      <h1> <a href="Faith.html">  Faith and Technology Integration Page </a></h1>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 BSCS | LUCILLE MAE G. PALANGAN 
+</footer>
+
+</body>
+</html>

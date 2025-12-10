@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Service or Advocacy Page</title>
+
+<style>
+/* ---------------- Animated Background ---------------- */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(120deg, #4CAF50, #43A047, #2E7D32, #66BB6A);
+    background-size: 400% 400%;
+    animation: bgMove 15s ease infinite;
+    overflow-x: hidden;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ---------------- Floating Bubbles ---------------- */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    animation: float 8s infinite ease-in-out;
+}
+
+.bubble:nth-child(1) { width: 160px; height: 160px; left: 12%; top: 20%; animation-duration: 12s; }
+.bubble:nth-child(2) { width: 220px; height: 220px; left: 68%; top: 40%; animation-duration: 14s; }
+.bubble:nth-child(3) { width: 120px; height: 120px; left: 45%; top: 75%; animation-duration: 10s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+/* ---------------- Home Icon Button ---------------- */
+.home-btn {
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: transform 180ms ease, background 180ms ease;
+    text-decoration: none;
+    color: white;
+}
+
+.home-btn:focus {
+    outline: 2px solid rgba(255,255,255,0.35);
+    outline-offset: 2px;
+}
+
+.home-btn:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.18);
+}
+
+/* ---------------- Header ---------------- */
+.header {
+    text-align: center;
+    padding: 60px 20px 20px;
+    color: white;
+    animation: fadeDown 1.6s ease;
+}
+
+.header h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- Content Box ---------------- */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    color: #fff;
+    animation: fadeUp 1.6s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* ---------------- Gallery (Optional) ---------------- */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 230px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+    animation: imgFloat 6s ease-in-out infinite;
+    transition: 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 22px rgba(255,255,255,0.6);
+}
+
+@keyframes imgFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+</style>
+</head>
+
+<body>
+    <!-- Home Icon (change href to your homepage) -->
+<a class="home-btn" href="Palz.html" aria-label="Go to Home">
+    <!-- Inline SVG home icon -->
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="rgba(255,255,255,0.06)"/>
+    </svg>
+</a>
+
+<!-- Floating Bubbles -->
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+<!-- Header -->
+<div class="header">
+    <h1>Community Service or Advocacy Page</h1>
+</div>
+
+<!-- Content -->
+<div class="container">
+    <p>
+        Imagine a world where every street is clean and green, thanks to people who care. These pictures remind us that 
+        keeping our community beautiful starts with each of us. These volunteers are not just picking up trash; they're 
+        building a sense of pride and unity. They show us that taking care of our environment is a way of showing love 
+        for our neighbors.
+    </p>
+
+    <p>
+        By cleaning up together, they create a space where everyone can enjoy and feel safe. Their actions inspire us to 
+        think about how we can also make a difference, no matter how small. Let’s join them in protecting our planet, 
+        one piece of litter at a time.
+    </p>
+
+    <p>
+        Together, we can create a cleaner, healthier, and more vibrant community for all. It's a powerful reminder that 
+        our actions today shape the world of tomorrow.
+    </p>
+
+    <!-- Photo Section -->
+    <div class="gallery">
+        <img src="c:\Users\lucil\Pictures\received_761168546729584.jpeg" alt="">
+        <img src="c:\Users\lucil\Pictures\Messenger_creation_790994547282447.jpeg" alt="">
+        <img src="c:\Users\lucil\Pictures\received_1086027316978955.jpeg" alt="">
+    </div>
+</div>
+
+</body>
+</html>

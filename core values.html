@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Values</title>
+
+    <style>
+
+        /* Background with floating animated shapes */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4 40%, #a1c4fd 70%, #c2e9fb);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top:0;
+  z-index: 10;
+}
+
+nav h1{
+  color:#00eaff;
+  font-size:1.8rem;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin-right: 100px;
+  font-size: 1.5em;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+  margin-right: 70px;
+  font-size: 1.5em;
+}
+
+nav ul li a:hover{
+  color:#00ff9d;
+  text-shadow:0 0 10px #00ff9d;
+}
+
+        /* Floating circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.35;
+            animation: float 6s infinite ease-in-out;
+            filter: blur(3px);
+        }
+
+        .circle:nth-child(1) {
+            width: 150px; height: 150px; background: #ff6bcb;
+            top: 10%; left: 20%;
+        }
+
+        .circle:nth-child(2) {
+            width: 220px; height: 220px; background: #6bc5ff;
+            bottom: 15%; right: 10%;
+            animation-duration: 8s;
+        }
+
+        .circle:nth-child(3) {
+            width: 120px; height: 120px; background: #7effa5;
+            top: 60%; left: 5%;
+            animation-duration: 7s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-25px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Glass neon card */
+        .card {
+            width: 460px;
+            padding: 40px 45px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            box-shadow: 
+                0 0 20px rgba(255,255,255,0.4),
+                0 8px 25px rgba(0,0,0,0.3);
+            text-align: center;
+            z-index: 10;
+            animation: popIn 1.2s ease;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Gradient title */
+        .title {
+            font-size: 38px;
+            font-weight: 800;
+            background: linear-gradient(to right, #ff7eb3, #ff758c, #ffb36b, #6bcbff);
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        /* List style */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 18px 0;
+            background: rgba(255,255,255,0.3);
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: #003;
+            transition: 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Glow and lift on hover */
+        ul li:hover {
+            transform: translateY(-6px);
+            background: linear-gradient(135deg, #ff6bcb, #6bc5ff);
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+  <h1>Lucille's Website</h1>
+  <ul>
+    <li><a href="Palz.html">Home</a></li>
+    
+  </ul>
+</nav>
+
+    <!-- Animated floating shapes -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Main animated card -->
+    <div class="card">
+        <h1 class="title">CORE VALUES</h1>
+
+        <ul>
+            <li>INTEGRITY</li>
+            <li>COMPASSION</li>
+            <li>EXCELLENCE</li>
+        </ul>
+    </div>
+
+</body>
+</html>

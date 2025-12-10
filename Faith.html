@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faith and Technology Integration</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background: linear-gradient(120deg, #0f6ab4, #45a7ff);
+        min-height: 100vh;
+        overflow-x: hidden;
+        animation: bgShift 10s infinite alternate ease-in-out;
+    }
+
+    @keyframes bgShift {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+
+    .floating-lights div {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        filter: blur(3px);
+        animation: float 9s infinite ease-in-out;
+    }
+
+    .floating-lights .l1 { width: 160px; height: 160px; top: 12%; left: 8%; animation-delay: 0s; }
+    .floating-lights .l2 { width: 230px; height: 230px; bottom: 18%; right: 12%; animation-delay: 2s; }
+    .floating-lights .l3 { width: 140px; height: 140px; bottom: 40%; left: 25%; animation-delay: 4s; }
+    .floating-lights .l4 { width: 180px; height: 180px; top: 30%; right: 20%; animation-delay: 6s; }
+
+    @keyframes float {
+        0% { transform: translateY(0); opacity: .6; }
+        50% { transform: translateY(-20px); opacity: 1; }
+        100% { transform: translateY(0); opacity: .6; }
+    }
+
+    .header {
+        text-align: center;
+        margin-top: 40px;
+        color: #fff;
+        animation: fadeIn 1.5s ease-out;
+    }
+
+    .header h1 {
+        font-size: 2.7rem;
+        text-shadow: 0 0 15px rgba(255,255,255,0.7);
+        animation: glowText 3s infinite alternate;
+    }
+
+    .header p {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        opacity: .9;
+    }
+
+    @keyframes glowText {
+        0% { text-shadow: 0 0 15px #ffffff; }
+        100% { text-shadow: 0 0 25px #cbe6ff; }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content-box {
+        max-width: 900px;
+        margin: 40px auto;
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(15px);
+        padding: 40px;
+        border-radius: 20px;
+        color: #fff;
+        box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+        animation: fadeIn 1.4s ease-out;
+    }
+    /* ---------------- HOME BUTTON ---------------- */
+    .home-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.18);
+        backdrop-filter: blur(8px);
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        cursor: pointer;
+        transition: 0.3s ease;
+        text-decoration: none;
+        z-index: 999;
+    }
+
+    .home-btn:hover {
+        transform: translateY(-4px);
+        background: rgba(255,255,255,0.3);
+    }
+
+    .home-btn svg {
+        width: 26px;
+        height: 26px;
+        stroke: #ffffff;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+        text-shadow: 0 0 8px rgba(255,255,255,0.4);
+    }
+
+    p {
+        line-height: 1.7;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        opacity: .95;
+    }
+
+    .gallery {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+</style>
+</head>
+<body>
+     <!-- ⭐ HOME BUTTON ⭐ (edit href to your home page) -->
+    <a href="Palz.html" class="home-btn" title="Go Home">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z"/>
+        </svg>
+    </a>
+
+    <div class="floating-lights">
+        <div class="l1"></div>
+        <div class="l2"></div>
+        <div class="l3"></div>
+        <div class="l4"></div>
+    </div>
+
+    <div class="header">
+        <h1>Faith and Technology Integration</h1>
+    </div>
+
+    <div class="content-box">
+       
+        <p>
+            Technology today gives us many ways to share faith and positivity with others. Through social media, we can post Bible verses, prayers, or uplifting messages that reach people instantly. I've seen friends create videos that talk about hope and kindness, and it really inspires me. Even simple things like making a blog or webpage can be powerful when it's filled with love and truth. We don't need to be famous to make a difference—just honest and caring.
+        </p>
+
+        <p>
+            I believe that when we use technology with good intentions, it becomes a tool for light. It helps us connect with others who may feel alone or lost. Sharing faith online reminds people that God is always near, even in digital spaces. It's amazing how one post or message can touch someone's heart. That's why I want to use technology not just for fun, but for something meaningful—to spread hope, kindness, and faith.
+        </p>
+
+        <div class="gallery">
+            <img src="c:\Users\lucil\Pictures\Screenshots\screenshot-1764679225274.png" alt="Faith image 2" />
+            <img src="c:\Users\lucil\Pictures\IMG_20250117_173425_841.jpg" alt="Faith image 1" />
+            <img src="c:\Users\lucil\Pictures\Screenshots\screenshot-1764680240468.png" alt="Faith image 3" />
+        </div>
+    </div>
+
+</body>
+</html>

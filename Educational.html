@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Educational or Informational Page</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background: linear-gradient(120deg, #1e3c72, #2a5298);
+        height: 100vh;
+        overflow-x: hidden;
+        animation: bgShift 10s infinite alternate ease-in-out;
+    }
+
+    @keyframes bgShift {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+
+    /* ---------------- HOME BUTTON ---------------- */
+    .home-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.18);
+        backdrop-filter: blur(8px);
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        cursor: pointer;
+        transition: 0.3s ease;
+        text-decoration: none;
+        z-index: 999;
+    }
+
+    .home-btn:hover {
+        transform: translateY(-4px);
+        background: rgba(255,255,255,0.3);
+    }
+
+    .home-btn svg {
+        width: 26px;
+        height: 26px;
+        stroke: #ffffff;
+    }
+    /* ------------------------------------------------ */
+
+    .floating-circles div {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.08);
+        animation: float 8s infinite ease-in-out;
+    }
+
+    .floating-circles .c1 { width: 180px; height: 180px; top: 10%; left: 5%; animation-delay: 0s; }
+    .floating-circles .c2 { width: 220px; height: 220px; bottom: 15%; right: 10%; animation-delay: 2s; }
+    .floating-circles .c3 { width: 140px; height: 140px; bottom: 40%; left: 20%; animation-delay: 4s; }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+    }
+
+    .container {
+        max-width: 900px;
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(15px);
+        padding: 40px;
+        border-radius: 20px;
+        margin: 60px auto;
+        color: #fff;
+        box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+        animation: fadeIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(25px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        text-shadow: 0 0 10px rgba(255,255,255,0.6);
+        animation: glowTitle 3s infinite alternate;
+    }
+
+    @keyframes glowTitle {
+        0% { text-shadow: 0 0 10px #88b4ff; }
+        100% { text-shadow: 0 0 20px #ffffff; }
+    }
+
+    h2 {
+        margin-top: 20px;
+        font-size: 1.6rem;
+        text-shadow: 0 0 5px rgba(255,255,255,0.4);
+    }
+
+    p {
+        margin-top: 10px;
+        line-height: 1.7;
+        font-size: 1.1rem;
+        color: #e9e9e9;
+    }
+
+    .gallery {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.07);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+</style>
+</head>
+<body>
+
+    <!-- ⭐ HOME BUTTON ⭐ (edit href to your home page) -->
+    <a href="Palz.html" class="home-btn" title="Go Home">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z"/>
+        </svg>
+    </a>
+
+    <div class="floating-circles">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+    </div>
+
+    <div class="container">
+        <h1>Educational or Informational Page</h1>
+        <p>
+            Being kind and honest online is just as important as how we act in real life. Everything we post affects real people with real feelings. Practicing empathy, respect, and responsibility helps create a safer and more welcoming digital world.
+        </p>
+
+        <p>
+            Digital integrity means choosing what is right—even when no one is watching. Simple actions like speaking respectfully, thinking before posting, and using technology wisely can make a big difference. Every message, comment, and decision contributes to the kind of online space we build together.
+        </p>
+
+        <div class="gallery">
+            <img src="c:\Users\lucil\Pictures\Screenshots\screenshot-1764680595175.png" alt="Digital concept" />
+            <img src="c:\Users\lucil\Pictures\Screenshots\screenshot-1764680818550.png" alt="Digital concept" />
+            <img src="c:\Users\lucil\Pictures\Screenshots\screenshot-1764676562054.png" alt="Digital concept" />
+        </div>
+    </div>
+
+</body>
+</html>

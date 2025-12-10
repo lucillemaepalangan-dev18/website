@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Inspirational Portfolio Page</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #ff5f6d, #ffc371);
+        height: 100vh;
+        overflow-x: hidden;
+        animation: bgMove 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgMove {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+
+    /* ---------------- HOME BUTTON ---------------- */
+    .home-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.25);
+        backdrop-filter: blur(8px);
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        cursor: pointer;
+        transition: 0.3s ease;
+        text-decoration: none;
+    }
+
+    .home-btn:hover {
+        transform: translateY(-4px);
+        background: rgba(255,255,255,0.35);
+    }
+
+    .home-btn svg {
+        width: 26px;
+        height: 26px;
+        stroke: #004aad;
+    }
+    /* ------------------------------------------------ */
+
+    .container {
+        max-width: 900px;
+        background: #ffffffee;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+        text-align: center;
+        color: #0057d8;
+        margin-bottom: 20px;
+        font-size: 2.3rem;
+        animation: slideGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes slideGlow {
+        0% { text-shadow: 0 0 5px #6ab7ff; }
+        100% { text-shadow: 0 0 15px #004aad; }
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .highlight {
+        color: #0077ff;
+        font-weight: bold;
+    }
+
+    .gallery {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    }
+</style>
+</head>
+<body>
+
+    <!-- ⭐ Home Icon Button (edit href to your homepage) -->
+    <a href="Palz.html" class="home-btn" title="Go to Home">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z" />
+        </svg>
+    </a>
+
+    <div class="container">
+        <h1>Inspirational Portfolio Page</h1>
+
+        <p>
+            Creating an inspirational portfolio is a way to share who I am and what I believe in. It's not just about showing my work—it's about showing my heart. I want people to see that my goals are guided by faith, kindness, and a desire to help others.
+            The theme <span class="highlight">"Light of the World"</span> reminds me to be a source of hope wherever I go, even online.
+        </p>
+
+        <div class="gallery">
+            <img src="c:\Users\lucil\Pictures\Messenger_creation_1133228598586756.jpeg" alt="Inspiration 1" />
+            <img src="c:\Users\lucil\Pictures\received_1480153253138901.jpeg" alt="Inspiration 2" />
+            <img src="c:\Users\lucil\Pictures\Messenger_creation_1DE52C85-22D0-43E2-92AA-C2D59D6952F5.jpeg" alt="Inspiration 3" />
+        </div>
+    </div>
+
+</body>
+</html>
